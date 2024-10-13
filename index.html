@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MagnetBull_Blue</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Remplacement de la police par 'Poppins' -->
+    <link rel="icon" href="images/Design sans titre (3).png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -70,7 +70,7 @@
             margin: 0 auto;
             box-shadow: 0 4px 6px rgba(59, 130, 246, 0.5);
             animation: float 3s ease-in-out infinite;
-            word-wrap: break-word;
+            word-break: break-all; /* Permet la rupture des mots longs */
             text-align: center;
         }
         @keyframes float {
@@ -101,6 +101,42 @@
         }
         .contract-address {
             word-break: break-all;
+        }
+        /* Media queries pour les petits écrans */
+        @media (max-width: 640px) {
+            .scrolling-bar-content {
+                font-size: 1rem;
+            }
+            .ca-bubble {
+                width: 90%;
+                max-width: 300px;
+                font-size: 1.2rem; /* Réduction supplémentaire de la taille de la police */
+                padding: 8px 15px; /* Ajustement du padding */
+            }
+            /* Ajustement des sections pour éviter tout débordement */
+            section {
+                padding: 15px;
+            }
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 10px;
+            }
+            .flex.space-x-4.items-center.mt-4.md\:mt-0 {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .flex.space-x-2 {
+                justify-content: flex-start;
+            }
         }
     </style>
 </head>
