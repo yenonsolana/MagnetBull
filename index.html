@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MagnetBull_Blue</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Remplacement de la police par 'Bangers' -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Comic Neue', cursive;
+            font-family: 'Bangers', cursive;
         }
         .theme-blue {
             --tw-bg-opacity: 1;
@@ -37,7 +38,7 @@
         }
         .scrolling-bar-content {
             display: inline-block;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Ajustement de la taille de la police */
             padding-left: 100%;
             animation: scroll-left 20s linear infinite;
         }
@@ -52,13 +53,26 @@
                 transform: translateX(-100%);
             }
         }
+        /* Media queries pour les petits écrans */
+        @media (max-width: 640px) {
+            .scrolling-bar-content {
+                font-size: 1rem;
+            }
+            .ca-bubble {
+                width: 90%;
+                max-width: 300px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+        }
         .ca-bubble {
             background-color: #3b82f6;
             color: white;
             font-size: 2rem;
             font-weight: bold;
             border-radius: 300px;
-            width: 750px;
+            width: 90%;
+            max-width: 750px;
             height: 60px;
             display: flex;
             align-items: center;
@@ -80,17 +94,17 @@
 <body class="bg-black text-white">
 
     <header class="bg-gray-900 shadow">
-        <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="container mx-auto flex flex-wrap justify-between items-center p-4">
             <a href="#" class="text-blue-500 text-3xl font-bold">MagnetBull</a>
-            <nav>
-                <ul class="flex space-x-4">
+            <nav class="w-full md:w-auto">
+                <ul class="flex flex-col md:flex-row md:space-x-4">
                     <li><a href="#about" class="hover:text-blue-500">About</a></li>
                     <li><a href="#roadmap" class="hover:text-blue-500">Roadmap</a></li>
                     <li><a href="#tokenomics" class="hover:text-blue-500">Tokenomics</a></li>
                     <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
                 </ul>
             </nav>
-            <div class="flex space-x-4 items-center">
+            <div class="flex space-x-4 items-center mt-4 md:mt-0">
                 <a href="https://dexscreener.com/solana/6jua8dyflmhyfjngyxd2yjjipqjlnriboxnecti7chdx" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-black px-4 py-2 rounded">
                     Buy Now
                 </a>
@@ -105,7 +119,8 @@
                     </a>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
     <div class="my-5">
         <div class="ca-bubble">
@@ -116,7 +131,7 @@
     <section class="bg-gray-800 py-5" id="hero">
         <div class="container mx-auto text-center">
             <h1 class="text-5xl font-bold text-blue-500 mb-6">MagnetBull</h1>
-            <p class="text-lg mb-8">Meet MagnetBull, the cutest and most charismatic bull in the universe, wielding an extraordinary magnetic force.    </p>
+            <p class="text-lg mb-8">Meet MagnetBull, the cutest and most charismatic bull in the universe, wielding an extraordinary magnetic force.</p>
             <a href="https://dexscreener.com/solana/6jua8dyflmhyfjngyxd2yjjipqjlnriboxnecti7chdx" target="_blank" class="bg-blue-500 hover:bg-blue-600 text-black px-6 py-3 rounded-full text-lg">Buy MagnetBull</a>
             <div class="flex justify-center space-x-6 mt-8">
                 <a href="https://x.com/i/communities/1845001984710988016" target="_blank" class="text-blue-500 hover:text-blue-400">
@@ -250,7 +265,7 @@
     <section class="py-20 bg-gray-800" id="contact">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-blue-500 mb-6">Contact Us</h2>
-            <p class="mb-8">Stay connected with MagnetBull Blue through our social channels. Join the conversation, share your experiences, and be part of our growing community as we embark on this magnetic journey together !</p>
+            <p class="mb-8">Stay connected with MagnetBull Blue through our social channels. Join the conversation, share your experiences, and be part of our growing community as we embark on this magnetic journey together!</p>
             <div class="flex justify-center space-x-6">
                 <a href="https://dexscreener.com/solana/6jua8dyflmhyfjngyxd2yjjipqjlnriboxnecti7chdx" target="_blank" class="text-blue-500 hover:text-blue-400">
                     <img src="https://dexscreener.com/favicon.ico" alt="Dexscreener" class="h-8 w-8">
